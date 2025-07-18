@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_URL = '/api/proxy/chat'
+const baseUrl = import.meta.env.VITE_BASE_URL;
+
+const API_URL = `${baseUrl}/chat`
 
 export const startConversationApi = async (access_token: string) => {
   const response = await axios.post(
